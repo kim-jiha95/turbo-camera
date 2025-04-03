@@ -1,0 +1,26 @@
+# Development
+node_modules
+.idea
+.vscode
+
+# Build artifacts
+android/build
+ios/build
+**/.gradle
+
+# Source files (since we're publishing the compiled files)
+spec
+TurboCameraView.tsx
+
+# Git 
+.git
+.gitignore
+
+# npm
+npm-debug.log
+
+# Tests
+__tests__
+*.test.js
+*.spec.js
+coverage
