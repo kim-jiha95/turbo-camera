@@ -5,9 +5,9 @@ A React Native TurboModule for camera functionality and QR code scanning.
 ## Installation
 
 ```sh
-npm install @dubu/turbo-camera
+npm install dubu-turbo-camera
 # or
-yarn add @dubu/turbo-camera
+yarn add dubu-turbo-camera
 ```
 
 ## Publishing
@@ -46,7 +46,7 @@ If you want to test the package locally without publishing:
 Add the following to your `Podfile`:
 
 ```ruby
-pod 'turbo-camera', :path => '../node_modules/@dubu/turbo-camera'
+pod 'turbo-camera', :path => '../node_modules/dubu-turbo-camera'
 ```
 
 Then run:
