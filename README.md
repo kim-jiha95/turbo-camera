@@ -10,6 +10,37 @@ npm install turbo-camera
 yarn add turbo-camera
 ```
 
+## Publishing
+
+To publish this package to npm, follow these steps:
+
+1. Ensure you have an npm account and are logged in:
+   ```
+   npm login
+   ```
+
+2. Build the package:
+   ```
+   npm run build
+   ```
+
+3. Publish the package:
+   ```
+   npm publish
+   ```
+
+If you want to test the package locally without publishing:
+
+1. Create a tarball:
+   ```
+   npm pack
+   ```
+
+2. Install the tarball in your project:
+   ```
+   npm install /path/to/turbo-camera-1.0.0.tgz
+   ```
+
 ### iOS
 
 Add the following to your `Podfile`:
