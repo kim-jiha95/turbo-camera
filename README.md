@@ -5,9 +5,9 @@ A React Native TurboModule for camera functionality and QR code scanning.
 ## Installation
 
 ```sh
-npm install dubu-turbo-camera
+npm install turbo-camera
 # or
-yarn add dubu-turbo-camera
+yarn add turbo-camera
 ```
 
 ## Publishing
@@ -15,11 +15,13 @@ yarn add dubu-turbo-camera
 To publish this package to npm, follow these steps:
 
 1. Ensure you have an npm account and are logged in:
+
    ```
    npm login
    ```
 
 2. Build the package:
+
    ```
    npm run build
    ```
@@ -32,6 +34,7 @@ To publish this package to npm, follow these steps:
 If you want to test the package locally without publishing:
 
 1. Create a tarball:
+
    ```
    npm pack
    ```
@@ -46,7 +49,7 @@ If you want to test the package locally without publishing:
 Add the following to your `Podfile`:
 
 ```ruby
-pod 'turbo-camera', :path => '../node_modules/dubu-turbo-camera'
+pod 'turbo-camera', :path => '../node_modules/turbo-camera'
 ```
 
 Then run:
@@ -62,14 +65,18 @@ No additional setup required for Android as it's linked automatically through Re
 ## Usage
 
 ```javascript
-import { TurboCameraView, TurboCamera, requestCameraPermission } from 'turbo-camera';
-import React, { useEffect, useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import {
+  TurboCameraView,
+  TurboCamera,
+  requestCameraPermission,
+} from "turbo-camera";
+import React, { useEffect, useState } from "react";
+import { View, Text, Button, StyleSheet } from "react-native";
 
 const CameraExample = () => {
   const [hasPermission, setHasPermission] = useState(false);
   const [scanned, setScanned] = useState(false);
-  const [qrData, setQrData] = useState('');
+  const [qrData, setQrData] = useState("");
 
   useEffect(() => {
     (async () => {
@@ -89,7 +96,7 @@ const CameraExample = () => {
 
   const startScanning = async () => {
     setScanned(false);
-    setQrData('');
+    setQrData("");
     await TurboCamera.startScanning();
   };
 
@@ -119,19 +126,19 @@ const CameraExample = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: "column",
   },
   camera: {
     flex: 1,
   },
   result: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'white',
+    backgroundColor: "white",
     padding: 15,
-    alignItems: 'center',
+    alignItems: "center",
   },
 });
 
@@ -151,6 +158,7 @@ export default CameraExample;
 A React Native component that displays the camera feed.
 
 Props:
+
 - `onQRCodeDetected`: Callback function that is called when a QR code is detected.
 - `onBarCodeRead`: Callback function that is called when a barcode is read (alias for onQRCodeDetected).
 - `onTextDetected`: Callback function that is called when text is detected.
