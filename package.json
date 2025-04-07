@@ -1,6 +1,6 @@
 {
   "name": "turbo-camera-dubu",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native TurboModule for camera functionality and QR code scanning",
   "publishConfig": {
     "access": "public"
@@ -18,6 +18,10 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kim-jiha95/turbo-camera.git"
   },
   "keywords": [
     "react-native",
