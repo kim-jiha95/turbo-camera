@@ -1,6 +1,6 @@
 {
   "name": "turbo-camera-dubu",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "React Native TurboModule for camera functionality and QR code scanning",
   "publishConfig": {
     "access": "public"

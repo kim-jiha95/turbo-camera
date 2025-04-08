@@ -17,9 +17,7 @@ class TurboCameraView: UIView {
     private let headerView = UIView()
     private let titleLabel = UILabel()
     private let backButton = UIButton(type: .system)
-    private let scanFrameView = UIView()
     private let backgroundImageView = UIImageView()
-    private var scannerAreaSize: CGFloat = 250 
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,20 +40,6 @@ class TurboCameraView: UIView {
         headerView.backgroundColor = UIColor(white: 0, alpha: 0.5)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(headerView)
-        
-        scanFrameView.translatesAutoresizingMaskIntoConstraints = false
-        scanFrameView.layer.borderColor = UIColor.yellow.cgColor
-        scanFrameView.layer.borderWidth = 3
-        scanFrameView.layer.cornerRadius = 10
-        scanFrameView.backgroundColor = UIColor.clear
-        addSubview(scanFrameView)
-        
-        NSLayoutConstraint.activate([
-            scanFrameView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            scanFrameView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            scanFrameView.widthAnchor.constraint(equalToConstant: scannerAreaSize),
-            scanFrameView.heightAnchor.constraint(equalToConstant: scannerAreaSize)
-        ])
     }
     
     @objc private func backButtonTapped() {
@@ -114,8 +98,7 @@ class TurboCameraView: UIView {
         
         if let metadataOutput = captureSession?.outputs.first as? AVCaptureMetadataOutput,
            let previewLayer = self.previewLayer {
-            let scanFrame = scanFrameView.frame
-            let rectOfInterest = previewLayer.metadataOutputRectConverted(fromLayerRect: scanFrame)
+            let rectOfInterest = CGRect(x: 0.3, y: 0.3, width: 0.4, height: 0.4)
             metadataOutput.rectOfInterest = rectOfInterest
         }
     }
