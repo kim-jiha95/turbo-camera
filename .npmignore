@@ -9,8 +9,6 @@ ios/build
 **/.gradle
 
 # Source files (since we're publishing the compiled files)
-spec
-TurboCameraView.tsx
 
 # Git 
 .git
