@@ -5,9 +5,9 @@ A React Native TurboModule for camera functionality and QR code scanning.
 ## Installation
 
 ```sh
-npm install turbo-camera
+npm install turbo-camera-dubu
 # or
-yarn add turbo-camera
+yarn add turbo-camera-dubu
 ```
 
 ## Publishing
@@ -49,7 +49,7 @@ If you want to test the package locally without publishing:
 Add the following to your `Podfile`:
 
 ```ruby
-pod 'turbo-camera', :path => '../node_modules/turbo-camera'
+pod 'turbo-camera-dubu', :path => '../node_modules/turbo-camera-dubu'
 ```
 
 Then run:
@@ -69,7 +69,7 @@ import {
   TurboCameraView,
   TurboCamera,
   requestCameraPermission,
-} from "turbo-camera";
+} from "turbo-camera-dubu";
 import React, { useEffect, useState } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
@@ -172,3 +172,15 @@ A function that requests camera permission from the user.
 ## License
 
 MIT
+
+### iOS Setup
+
+Add the following permissions to your `Info.plist`:
+
+```xml
+<key>NSCameraUsageDescription</key>
+<string>We need access to your camera for QR code scanning</string>
+
+<key>NSMicrophoneUsageDescription</key>
+<string>We need access to your microphone for video recording</string>
+```

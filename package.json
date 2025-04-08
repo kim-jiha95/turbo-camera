@@ -1,21 +1,12 @@
 {
   "name": "turbo-camera-dubu",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React Native TurboModule for camera functionality and QR code scanning",
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "android",
-    "ios",
-    "lib",
-    "spec",
-    "turbo-camera-dubu.podspec",
-    "!android/build",
-    "!ios/build"
-  ],
+  "main": "lib/spec/index.js",
+  "types": "lib/spec/index.d.ts",
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
@@ -30,7 +21,7 @@
     "qrcode",
     "turbomodule"
   ],
-  "author": "dubu",
+  "author": "dubudubu",
   "license": "MIT",
   "peerDependencies": {
     "react": "*",
